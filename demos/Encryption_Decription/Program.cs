@@ -17,7 +17,8 @@ namespace ConsoleApplication
         {
             //symmetric_encryption();
             //symmetric_decryption();
-            asymmetric_encryption_decryption();
+            //asymmetric_encryption_decryption();
+            certificates();
         }
 
         private static void symmetric_encryption()

@@ -1,5 +1,5 @@
---temp-output:c:\CM\C#\NETFOUNB\demo_core\Encryption_Decription\obj\Debug\netcoreapp1.0\
---out:c:\CM\C#\NETFOUNB\demo_core\Encryption_Decription\bin\Debug\netcoreapp1.0\Encryption_Decription.dll
+--temp-output:c:\CM\C#\NETFOUNB\core\demos\Encryption_Decription\obj\Debug\netcoreapp1.0\
+--out:c:\CM\C#\NETFOUNB\core\demos\Encryption_Decription\bin\Debug\netcoreapp1.0\Encryption_Decription.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -87,4 +87,4 @@
 --reference:C:\Users\Administrator\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
-c:\CM\C#\NETFOUNB\demo_core\Encryption_Decription\Program.cs
+c:\CM\C#\NETFOUNB\core\demos\Encryption_Decription\Program.cs

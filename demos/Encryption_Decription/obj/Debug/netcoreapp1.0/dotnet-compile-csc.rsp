@@ -7,8 +7,8 @@
 -debug:portable
 -nostdlib
 -nologo
-"c:\CM\C#\NETFOUNB\demo_core\Encryption_Decription\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"c:\CM\C#\NETFOUNB\demo_core\Encryption_Decription\bin\Debug\netcoreapp1.0\Encryption_Decription.dll"
+"c:\CM\C#\NETFOUNB\core\demos\Encryption_Decription\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"c:\CM\C#\NETFOUNB\core\demos\Encryption_Decription\bin\Debug\netcoreapp1.0\Encryption_Decription.dll"
 -r:"C:\Users\Administrator\.nuget\packages\Microsoft.CSharp\4.0.1\ref\netstandard1.0\Microsoft.CSharp.dll"
 -r:"C:\Users\Administrator\.nuget\packages\Microsoft.VisualBasic\10.0.1\ref\netstandard1.1\Microsoft.VisualBasic.dll"
 -r:"C:\Users\Administrator\.nuget\packages\Microsoft.Win32.Primitives\4.0.1\ref\netstandard1.3\Microsoft.Win32.Primitives.dll"
@@ -82,4 +82,4 @@
 -r:"C:\Users\Administrator\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\Administrator\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\Administrator\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
-"c:\CM\C#\NETFOUNB\demo_core\Encryption_Decription\Program.cs"
+"c:\CM\C#\NETFOUNB\core\demos\Encryption_Decription\Program.cs"
