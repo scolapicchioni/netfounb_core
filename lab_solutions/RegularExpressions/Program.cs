@@ -21,7 +21,7 @@ namespace ConsoleApplication
         private static void checkValid(string s)
         {
             var originalColor = Console.ForegroundColor;
-            string pattern = @"^-?\d*\.\d{2}$";
+            string pattern = @"^-?\d+\.\d{2}$";
             //   pattern = @"^-?\d{1,3}((\d*)|((,\d{3})*))\.\d{2}$";//if time permits            
 
             if (Regex.IsMatch(s, pattern))
