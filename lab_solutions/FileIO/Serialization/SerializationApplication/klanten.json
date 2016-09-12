@@ -1,0 +1,22 @@
+[
+  {
+    "CustomerID": 1,
+    "Name": "Hannah",
+    "Address": "Schoolstraat 4"
+  },
+  {
+    "CustomerID": 2,
+    "Name": "Reinier",
+    "Address": "Kerkstraat 13"
+  },
+  {
+    "CustomerID": 3,
+    "Name": "Vera",
+    "Address": "Langestraat 1"
+  },
+  {
+    "CustomerID": 4,
+    "Name": "Gerard",
+    "Address": "Kortesteeg 123"
+  }
+]

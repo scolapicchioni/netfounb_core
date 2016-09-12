@@ -1,0 +1,6 @@
+ConsoleApplication.Program Information: 0 : This is an INFORMATION about a test of the emergency broadcast system.
+ConsoleApplication.Program Critical: 0 : This is a CRITICAL information about a test of the emergency broadcast system.
+ConsoleApplication.Program Error: 0 : This is an ERROR of a test of the emergency broadcast system.
+ConsoleApplication.Program Verbose: 0 : This is a DEBUG message of a test of the emergency broadcast system.
+ConsoleApplication.Program Verbose: 0 : This is a TRACE message of a test of the emergency broadcast system.
+ConsoleApplication.Program Warning: 0 : This is a WARNING message of a test of the emergency broadcast system.

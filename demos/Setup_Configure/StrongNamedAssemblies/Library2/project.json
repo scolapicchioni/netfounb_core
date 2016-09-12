@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "buildOptions": {
+    "debugType": "portable",
+    "keyFile": "key.snk",
+    "outputName": "Library"
+  },
+  "dependencies": {},
+  "frameworks": {
+    "netstandard1.6": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.0"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+--temp-output:C:\CM\C#\NETFOUNB\demo_core\Threads\obj\Debug\net451\
+--out:C:\CM\C#\NETFOUNB\demo_core\Threads\bin\Debug\net451\Threads.exe
+--define:DEBUG
+--define:TRACE
+--define:NET451
+--suppress-warning:CS1701
+--suppress-warning:CS1702
+--suppress-warning:CS1705
+--platform:x64
+--optimize:False
+--debug-type:portable
+--emit-entry-point:True
+--output-name:Threads
+--file-version:1.0.0.0
+--version:1.0.0.0
+--informational-version:1.0.0
+--target-framework:.NETFramework,Version=v4.5.1
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\mscorlib.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Core.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.CSharp.dll
+C:\CM\C#\NETFOUNB\demo_core\Threads\Bank.cs
+C:\CM\C#\NETFOUNB\demo_core\Threads\BankAccount.cs
+C:\CM\C#\NETFOUNB\demo_core\Threads\Buffer.cs
+C:\CM\C#\NETFOUNB\demo_core\Threads\Program.cs

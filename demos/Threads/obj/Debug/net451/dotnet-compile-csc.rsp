@@ -1,0 +1,20 @@
+﻿-d:DEBUG
+-d:TRACE
+-d:NET451
+-nowarn:CS1701
+-nowarn:CS1702
+-nowarn:CS1705
+-platform:x64
+-debug:portable
+-nostdlib
+-nologo
+"C:\CM\C#\NETFOUNB\demo_core\Threads\obj\Debug\net451\dotnet-compile.assemblyinfo.cs"
+-out:"C:\CM\C#\NETFOUNB\demo_core\Threads\bin\Debug\net451\Threads.exe"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\mscorlib.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Core.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.CSharp.dll"
+"C:\CM\C#\NETFOUNB\demo_core\Threads\Bank.cs"
+"C:\CM\C#\NETFOUNB\demo_core\Threads\BankAccount.cs"
+"C:\CM\C#\NETFOUNB\demo_core\Threads\Buffer.cs"
+"C:\CM\C#\NETFOUNB\demo_core\Threads\Program.cs"

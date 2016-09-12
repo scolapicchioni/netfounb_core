@@ -1,0 +1,54 @@
+--temp-output:c:\CM\C#\NETFOUNB\demo_core\Process_Tracing_Debugging\obj\Debug\net451\
+--out:c:\CM\C#\NETFOUNB\demo_core\Process_Tracing_Debugging\bin\Debug\net451\Process_Tracing_Debugging.exe
+--define:DEBUG
+--define:TRACE
+--define:NET451
+--suppress-warning:CS1701
+--suppress-warning:CS1702
+--suppress-warning:CS1705
+--platform:x64
+--optimize:False
+--debug-type:portable
+--emit-entry-point:True
+--output-name:Process_Tracing_Debugging
+--file-version:1.0.0.0
+--version:1.0.0.0
+--informational-version:1.0.0
+--target-framework:.NETFramework,Version=v4.5.1
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Configuration.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Configuration.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration.FileExtensions\1.0.0\lib\net451\Microsoft.Extensions.Configuration.FileExtensions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration.Json\1.0.0\lib\net451\Microsoft.Extensions.Configuration.Json.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.DependencyInjection.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.FileProviders.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.FileProviders.Physical\1.0.0\lib\net451\Microsoft.Extensions.FileProviders.Physical.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.FileSystemGlobbing\1.0.0\lib\net451\Microsoft.Extensions.FileSystemGlobbing.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Logging\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Logging.Abstractions\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Logging.Console\1.0.0\lib\net451\Microsoft.Extensions.Logging.Console.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Logging.Debug\1.0.0\lib\net451\Microsoft.Extensions.Logging.Debug.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Logging.EventLog\1.0.0\lib\net451\Microsoft.Extensions.Logging.EventLog.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Logging.Filter\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.Filter.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Logging.TraceSource\1.0.0\lib\net451\Microsoft.Extensions.Logging.TraceSource.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Primitives\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll
+--reference:C:\Users\Administrator\.nuget\packages\Newtonsoft.Json\9.0.1\lib\net45\Newtonsoft.Json.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Collections.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Collections.Concurrent.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.ComponentModel.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Diagnostics.Debug.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Globalization.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.IO.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Linq.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Linq.Expressions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Reflection.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Resources.ResourceManager.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.Extensions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.InteropServices.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Runtime.InteropServices.RuntimeInformation\4.0.0\ref\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Threading.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\mscorlib.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Core.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.CSharp.dll
+c:\CM\C#\NETFOUNB\demo_core\Process_Tracing_Debugging\Program.cs
