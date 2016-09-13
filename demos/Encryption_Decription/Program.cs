@@ -30,6 +30,10 @@ namespace ConsoleApplication
                     using(Stream f = File.Create(FILENAME)){
                         using(Stream c = new CryptoStream(f,encriptor, CryptoStreamMode.Write)){
                             c.Write(data,0,data.Length);
+                            //or
+                            // using(StreamWriter sw = new StreamWriter(c)){
+                            //     sw.WriteLine(message);
+                            // }
                         }
                     }
                 }
@@ -46,6 +50,10 @@ namespace ConsoleApplication
                             for (int b = 0; (b = c.ReadByte())>-1;){
                                 decripted.Add((byte)b);                       
                             }
+                            //or
+                            // using(StreamReader sr = new StreamReader(c)){
+                            //         sr.ReadLine();
+                            // }
                         }
                     }
                 }

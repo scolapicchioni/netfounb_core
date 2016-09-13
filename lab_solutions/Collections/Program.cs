@@ -41,8 +41,8 @@ namespace ConsoleApplication
 
             //with lambda expressions
             //Check for values lt zero
-            testStrings.ForEach((s) => Console.WriteLine(s));
-            if (testStrings.Find((s) =>
+            testStrings.ForEach(s => Console.WriteLine(s));
+            if (testStrings.Find(s =>
             {
                 double result;
                  double.TryParse(s, out result);
