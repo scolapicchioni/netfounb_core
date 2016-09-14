@@ -6,17 +6,28 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication
 {
+    class Product{
+        public int Id { get; set; }
+        public string Name { get; set; }
+        // public System.Collections.Generic.List<Category> Categories { get{
+
+        // } set; }
+    }
+    class Category{
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
     public class Program
     {
         public static void Main(string[] args)
         {
             //parallelFor();
             //parallelForEach();
-            //parallelInvoke();
-            //task04();
+            parallelInvoke();
+            //task05();
             //plinq01();
             //blockingCollections01();
-            countdown();
+            //countdown();
             System.Console.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId} DONE");
         }
 
@@ -76,17 +87,39 @@ namespace ConsoleApplication
                 System.Console.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId} {number}");
             }
         }
+
+        private static void task06(){
+            Task<int>.Run(()=> {
+                for(int i = 0; i<50; i++){
+                    System.Console.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId} - {i}");
+                }
+                return 123 ;
+            }).ContinueWith((t)=>{
+                System.Console.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId} - Done {t.Result}!");
+            });
+
+
+        }
+
+        private static void task05(){
+            Task.Run(()=>{
+                for(int i = 0; i<50; i++){
+                    System.Console.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId} - {i}");
+                }
+            }).ContinueWith( t => {
+                System.Console.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId} -Done!");
+            });
+        }
+
         private static void task04(){
             CancellationTokenSource cts = new CancellationTokenSource();
             
             CancellationToken token = cts.Token;
 
-            
-            
-             
             Task myTask = Task.Factory.StartNew(() =>
             {
                 while(true) {
+                    
                     token.ThrowIfCancellationRequested();
                     System.Console.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId} Working");
                 }
@@ -99,10 +132,12 @@ namespace ConsoleApplication
         private static void task03(){
             Task<double>[] tasks = new Task<double>[]
             {
+
                 Task<double>.Factory.StartNew(method2),
+                //Task<double>.Run(method2),
                 Task<double>.Factory.StartNew(method2),
             };
-             
+            
             int indexOfFinishedTask = Task.WaitAny(tasks, 10000);
             System.Console.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId} - indexOfFinishedTask == {indexOfFinishedTask} - result is {tasks[indexOfFinishedTask].Result}");
             bool allReturned = Task.WaitAll(tasks, 5000);
@@ -123,6 +158,13 @@ namespace ConsoleApplication
             // Accessing Result will block
             // until Task has completed
             Console.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId} - {task.Result}");
+
+            //this does not block
+            task.ContinueWith((t)=>{
+                Console.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId} - {t.Result}");
+            });
+            //Task.Run()
+
         }
 
         private static void task01()
@@ -134,7 +176,7 @@ namespace ConsoleApplication
                 }
             });
             task.Start();
-
+            
         }
 
         private static void parallelInvoke()
@@ -152,17 +194,20 @@ namespace ConsoleApplication
 
             // Parallel 
             Parallel.ForEach(collection, item => process(item));
+
         }
 
         private static void parallelFor()
         {
-            for (int index = 0; index < 10; index++)
-            {
-                process(index);
-            }
+            // for (int index = 0; index < 10; index++)
+            // {
+            //     process(index);
+            // }
 
             // Parallel 
             Parallel.For(0, 10, (index) => process(index));
+
+            System.Console.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId} - parallelFor done!");
         }
 
         private static void process(int i){
