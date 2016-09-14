@@ -1,5 +1,5 @@
---temp-output:c:\CM\C#\NETFOUNB\demo_core\Threads\obj\Debug\netcoreapp1.0\
---out:c:\CM\C#\NETFOUNB\demo_core\Threads\bin\Debug\netcoreapp1.0\Threads.dll
+--temp-output:c:\CM\C#\NETFOUNB\core\demos\Threads\obj\Debug\netcoreapp1.0\
+--out:c:\CM\C#\NETFOUNB\core\demos\Threads\bin\Debug\netcoreapp1.0\Threads.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -87,7 +87,8 @@
 --reference:C:\Users\Administrator\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
-c:\CM\C#\NETFOUNB\demo_core\Threads\Bank.cs
-c:\CM\C#\NETFOUNB\demo_core\Threads\BankAccount.cs
-c:\CM\C#\NETFOUNB\demo_core\Threads\Buffer.cs
-c:\CM\C#\NETFOUNB\demo_core\Threads\Program.cs
+c:\CM\C#\NETFOUNB\core\demos\Threads\Bank.cs
+c:\CM\C#\NETFOUNB\core\demos\Threads\BankAccount.cs
+c:\CM\C#\NETFOUNB\core\demos\Threads\Buffer.cs
+c:\CM\C#\NETFOUNB\core\demos\Threads\ClassForExample01.cs
+c:\CM\C#\NETFOUNB\core\demos\Threads\Program.cs

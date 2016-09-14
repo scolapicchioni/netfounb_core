@@ -7,8 +7,9 @@ namespace Threads
     {
         public static void Main(string[] args)
         {
-            example10();
-            System.Console.WriteLine("end of Main");
+            System.Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId} Start of Main");
+            example08();
+            System.Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId} End of Main");
         }
 
         public static void example10(){
@@ -48,13 +49,18 @@ namespace Threads
             return $"You passed me {x} and {y}";
         }
         public static void example08(){
+            CountdownEvent ce = new CountdownEvent(50);
             for (int t = 0; t < 50; t++)
             {
                 ThreadPool.QueueUserWorkItem((o)=>{
                     System.Console.WriteLine($"{o} - {Thread.CurrentThread.ManagedThreadId}");
+                    ce.Signal();
                 },t);    
             }
+            ce.Wait();
         }
+
+        
 
         private static void example07(){
             Semaphore s = new  Semaphore(3,3);// empty, with a max of 3 running threads
@@ -74,6 +80,47 @@ namespace Threads
                 }).Start();
             }
         }
+
+        private static void example06_2(){
+            CountdownEvent ce = new CountdownEvent(3);
+            Random r = new Random();
+
+            new Thread(()=>{
+                for (int i = 0; i < 10; i++)
+                {
+                    System.Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId}: {i}");
+                    Thread.Sleep(r.Next(100));
+                }
+                ce.Signal();
+                System.Console.WriteLine("0 SET");
+            }).Start();
+
+            //waitHandles[0].WaitOne();
+            new Thread(()=>{
+                for (int i = 0; i < 10; i++)
+                {
+                    System.Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId}: {i}");
+                    Thread.Sleep(r.Next(100));
+                }
+                ce.Signal();
+                System.Console.WriteLine("1 SET");
+            }).Start();
+
+            new Thread(()=>{
+                for (int i = 0; i < 10; i++)
+                {
+                    System.Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId}: {i}");
+                    Thread.Sleep(r.Next(100));
+                }
+                ce.Signal();
+                System.Console.WriteLine("2 SET");
+            }).Start();
+
+            System.Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId}: is going to wait...");
+            ce.Wait();
+            System.Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId}: 3 Times Set (All threads done)");
+        }
+
         private static void example06(){
             EventWaitHandle[] waitHandles = new EventWaitHandle[]{new AutoResetEvent(false), new AutoResetEvent(false), new AutoResetEvent(false)};
             Random r = new Random();
@@ -88,6 +135,7 @@ namespace Threads
                 System.Console.WriteLine("0 SET");
             }).Start();
 
+            //waitHandles[0].WaitOne();
             new Thread(()=>{
                 for (int i = 0; i < 10; i++)
                 {
@@ -180,22 +228,63 @@ namespace Threads
             new Thread(DoLocked).Start();
         }
         private static void example02(){
+            // Do();
+            // Do();
+
             new Thread(Do).Start();
             new Thread(Do).Start();
         }
         private static void example01()
         {
-            Thread t = new Thread(longFunction);
-            t.Start();
+            Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId} Example 01");
+            //longFunction();
+            // Thread t = new Thread(longFunction);
+            // t.IsBackground = false;
+            // t.Start();
+            // Thread t2 = new Thread(longFunctionWithStuff);
+            // t2.Start("Hi!");
+            // t2.IsBackground = false;
+            
+            // Thread t2 = new Thread(anotherMethod);
+            // t.Start();
+            
+            // Thread t3 = new Thread(methodToInvokeAMethodWithTwoParams);
+            // t3.Start(new ClassForExample01(){X = 5, Y = 10});
 
-            Thread t2 = new Thread(longFunctionWithStuff);
-            t2.Start("Hi!");
+            int x = 5;
+            int y = 10;
+            
+            Thread t4 = new Thread( () => {
+                Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId} methodToInvokeAMethodWithTwoParams x: {x}, y: {y}");
+                int result = anotherMethod(x, y);
+                Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId} end of methodToInvokeAMethodWithTwoParams x: {x}, y: {y}");
+            });
+            t4.Start();
+            t4.Join();
+            //Console.WriteLine(result);
+            Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId} End of Example 01");
+            
+        }
+
+        public static void methodToInvokeAMethodWithTwoParams(object value){
+            ClassForExample01 val = (ClassForExample01)value;
+            Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId} methodToInvokeAMethodWithTwoParams x: {val.X}, y: {val.Y}");
+            int result = anotherMethod(val.X, val.Y);
+            Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId} end of methodToInvokeAMethodWithTwoParams x: {val.X}, y: {val.Y}");
+        }
+
+        public static int anotherMethod(int x, int y){
+            return x + y;
+        }
+
+        public static void aMethodWithTwoParams(int x, int y){
+            Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId} aMethodWithTwoParams x: {x}, y: {y}");
         }
 
         public static void longFunction() { 
             for (int i = 0; i < 10; i++)
             {
-                System.Console.WriteLine("Long Function " + i);
+                System.Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId} Long Function " + i);
                 Thread.Sleep(500);
             }
         }
@@ -203,7 +292,7 @@ namespace Threads
         public static void longFunctionWithStuff(object stuff) { 
             for (int i = 0; i < 10; i++)
             {
-                System.Console.WriteLine($"Long Function With Stuff ({stuff.ToString()}) {i}");
+                System.Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId} Long Function With Stuff ({stuff.ToString()}) {i}");
                 Thread.Sleep(500);
             }
         }
@@ -212,19 +301,22 @@ namespace Threads
 
         private static void Do(){
             if(!done){
-                
                 System.Console.WriteLine("Done!");
+                //Thread.Sleep(1);
                 done=true;
             }
         }
 
+        static object key = new object();
         private static void DoLocked(){
-            lock(typeof(Program)){
+            //Monitor.Enter(key);
+            lock(key){
                 if(!done){    
                     System.Console.WriteLine("Done!");
                     done=true;
                 }
             }
+            //Monitor.Exit(key);
         }
     }
 }

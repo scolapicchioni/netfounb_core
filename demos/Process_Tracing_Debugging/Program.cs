@@ -10,9 +10,9 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            //process();
+            process();
             //debugging();
-            extensions_logging();
+            //extensions_logging();
         }
 
 /*
@@ -33,7 +33,7 @@ had to add in project.json
 private static IConfigurationRoot Configuration { get; set;}
 
         private static void extensions_logging(){
-            https://github.com/aspnet/Logging/blob/master/samples/SampleApp/Program.cs
+            //https://github.com/aspnet/Logging/blob/master/samples/SampleApp/Program.cs
 
             //this is for the configuration File
 

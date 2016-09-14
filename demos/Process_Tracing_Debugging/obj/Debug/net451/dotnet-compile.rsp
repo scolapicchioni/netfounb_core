@@ -1,5 +1,5 @@
---temp-output:c:\CM\C#\NETFOUNB\demo_core\Process_Tracing_Debugging\obj\Debug\net451\
---out:c:\CM\C#\NETFOUNB\demo_core\Process_Tracing_Debugging\bin\Debug\net451\Process_Tracing_Debugging.exe
+--temp-output:c:\CM\C#\NETFOUNB\core\demos\Process_Tracing_Debugging\obj\Debug\net451\
+--out:c:\CM\C#\NETFOUNB\core\demos\Process_Tracing_Debugging\bin\Debug\net451\Process_Tracing_Debugging.exe
 --define:DEBUG
 --define:TRACE
 --define:NET451
@@ -51,4 +51,4 @@
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Core.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.CSharp.dll
-c:\CM\C#\NETFOUNB\demo_core\Process_Tracing_Debugging\Program.cs
+c:\CM\C#\NETFOUNB\core\demos\Process_Tracing_Debugging\Program.cs

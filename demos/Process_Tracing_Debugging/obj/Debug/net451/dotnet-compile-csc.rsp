@@ -8,8 +8,8 @@
 -debug:portable
 -nostdlib
 -nologo
-"c:\CM\C#\NETFOUNB\demo_core\Process_Tracing_Debugging\obj\Debug\net451\dotnet-compile.assemblyinfo.cs"
--out:"c:\CM\C#\NETFOUNB\demo_core\Process_Tracing_Debugging\bin\Debug\net451\Process_Tracing_Debugging.exe"
+"c:\CM\C#\NETFOUNB\core\demos\Process_Tracing_Debugging\obj\Debug\net451\dotnet-compile.assemblyinfo.cs"
+-out:"c:\CM\C#\NETFOUNB\core\demos\Process_Tracing_Debugging\bin\Debug\net451\Process_Tracing_Debugging.exe"
 -r:"C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Configuration.dll"
 -r:"C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Configuration.Abstractions.dll"
 -r:"C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration.FileExtensions\1.0.0\lib\net451\Microsoft.Extensions.Configuration.FileExtensions.dll"
@@ -46,4 +46,4 @@
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Core.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.CSharp.dll"
-"c:\CM\C#\NETFOUNB\demo_core\Process_Tracing_Debugging\Program.cs"
+"c:\CM\C#\NETFOUNB\core\demos\Process_Tracing_Debugging\Program.cs"
